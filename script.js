@@ -1,3 +1,41 @@
+fetch('JSON Dashboard/summary.json')
+  .then(response => response.json())
+  .then(data => {
+    const years = data.map(item => item.Year);
+    const revenue = data.map(item => parseInt(item.total_Revenue));
+    const profit = data.map(item => parseInt(item.total_Profit));
+    const cost = data.map(item => parseInt(item.total_Cost));
+
+    const ctx = document.getElementById('linechart').getContext('2d');
+    const linechart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: years,
+        datasets: [
+          {
+            label: 'Revenue',
+            borderColor: '#f66d00',
+            data: revenue
+          },
+          {
+            label: 'Profit',
+            borderColor: '#0072f0',
+            data: profit
+          },
+          {
+            label: 'Cost',
+            borderColor: '#f10096',
+            data: cost
+          }
+        ]
+      },
+      options: {
+      }
+    });
+  })
+  .catch(error => console.error(error));
+
+
 
 fetch('JSON Dashboard/revenue.json')
 	.then(response => response.json())
