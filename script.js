@@ -37,51 +37,68 @@ fetch('JSON Dashboard/summary.json')
 
 
 
-fetch('JSON Dashboard/revenue.json')
-	.then(response => response.json())
-	.then(data => {
-		const labels = data.map(item => item.Country);
-		const dataSet = data.map(item => item.total_revenue);
-        
+ fetch('JSON Dashboard/revenue.json')
+ .then(response => response.json())
+ .then(data => {
+    const countries = [...new Set(data.flatMap(item => item.Country))];
 
-		const ctx = document.getElementById('chart').getContext('2d');
-		const chart = new Chart(ctx, {
-			type: 'bar',
-			data: {
-				labels: labels,
-				datasets: [{
-					label: 'Total Revenue',
-					data: dataSet,
-					backgroundColor: [
-						'rgba(255, 99, 132, 0.2)',
-						'rgba(54, 162, 235, 0.2)',
-						'rgba(255, 206, 86, 0.2)',
-						'rgba(75, 192, 192, 0.2)',
-						'rgba(153, 102, 255, 0.2)',
-						'rgba(255, 159, 64, 0.2)'
-					],
-					borderColor: [
-						'rgba(255, 99, 132, 1)',
-						'rgba(54, 162, 235, 1)',
-						'rgba(255, 206, 86, 1)',
-						'rgba(75, 192, 192, 1)',
-						'rgba(153, 102, 255, 1)',
-						'rgba(255, 159, 64, 1)'
-					],
-					borderWidth: 1
-				}]
-			},
-			options: {
-				scales: {
-					y: {
-						beginAtZero: true
-					}
-				}
-			}
-		});
-        
-	})
+    const bikesRevenue = countries.map((country) => {
+      const countryData = data.flatMap(item => item).filter(
+        (item) => item.Country === country && item.Product_Category === "Bikes"
+      );
+      return countryData.length > 0? parseInt(countryData[0].total_revenue) : 0;
+    });
 
+    const accessoriesRevenue = countries.map((country) => {
+      const countryData = data.flatMap(item => item).filter(
+        (item) => item.Country === country && item.Product_Category === "Accessories"
+      );
+      return countryData.length > 0? parseInt(countryData[0].total_revenue) : 0;
+    });
+
+    const clothingRevenue = countries.map((country) => {
+      const countryData = data.flatMap(item => item).filter(
+        (item) => item.Country === country && item.Product_Category === "Clothing"
+      );
+      return countryData.length > 0? parseInt(countryData[0].total_revenue) : 0;
+    });
+
+    const ctx = document.getElementById("chart").getContext("2d");
+    const chart = new Chart(ctx, {
+      type: "bar",
+      data: {
+        labels: countries,
+        datasets: [
+          {
+            label: "Bikes Revenue",
+            data: bikesRevenue,
+            backgroundColor: "red",
+          },
+          {
+            label: "Accessories Revenue",
+            data: accessoriesRevenue,
+            backgroundColor: "blue",
+          },
+          {
+            label: "Clothing Revenue",
+            data: clothingRevenue,
+            backgroundColor: "pink",
+          },
+        ],
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true,
+            ticks: {
+              callback: (value) => (value / 1e6).toFixed(1) + "M",
+            },
+          },
+          x: {},
+        },
+      },
+    });
+  });
     fetch('JSON Dashboard/agepie.json')
         .then(response => response.json())
         .then(data => {
