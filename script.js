@@ -69,20 +69,20 @@ fetch('JSON Dashboard/summary.json')
       data: {
         labels: countries,
         datasets: [
-          {
+         {
             label: "Bikes Revenue",
             data: bikesRevenue,
-            backgroundColor: "red",
+            backgroundColor: "#f66d00",
           },
           {
             label: "Accessories Revenue",
             data: accessoriesRevenue,
-            backgroundColor: "blue",
+            backgroundColor: "#ffb300",
           },
           {
             label: "Clothing Revenue",
             data: clothingRevenue,
-            backgroundColor: "pink",
+            backgroundColor: "#ffd54f",
           },
         ],
       },
