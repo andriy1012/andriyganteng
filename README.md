@@ -2,7 +2,7 @@
 #### Section Surabaya - Team 7 Presents:
 
 <p align="center">
- <img src="images/logofix.png", width="1024px"/>
+ <img src="images/logofix.png", width="720px"/>
 </p>
 
 # Project Dataride
