@@ -59,6 +59,7 @@ label::before{
     font-size: 24px;
     font-weight: 600;
 }
+
 input[type="radio"]{
     display: none;
 }
@@ -70,13 +71,46 @@ input[type="radio"]{
     overflow: hidden;
     transition: max-height 0.5s, padding 0.5s;
 
-.accordion input[type="radio"]:checked + label + content{
-    max-height: 400px;
-    padding: 10px 10px 20px;
-}
+    .accordion input[type="radio"]:checked ~ label +.accordion li.content {
+      max-height: 400px;
+      padding: 10px 10px 20px;
+    }
 .accordion input[type="radio"]:checked + label ::before {
     content: "-";
 }
+.btn-faq {
+  background-color: #abace6;
+  display: flex;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 30px;
+  font-size: 14px;
+  padding: 10px auto !important;
+  border-radius: 11px !important;
+}
+.main-wrapper {
+    padding: 76px 60px;
+  }
+  
+  .landing-text {
+      font-family: "Montserrat";
+      font-style: normal;
+    }
+  
+  .landing-text > h1 {
+    font-weight: 700;
+    font-size: 60px;
+  }
+  
+  .sub-text {
+    font-size: 22px;
+    margin: 0;
+  }
+  
+  .img-wrap {
+    border-radius: 23px;
+    box-shadow: 34px -31px #445d8a;
+  }
 .btn-faq {
   background-color: #abace6;
   display: flex;
