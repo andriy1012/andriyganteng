@@ -59,6 +59,7 @@ label::before{
     font-size: 24px;
     font-weight: 600;
 }
+
 input[type="radio"]{
     display: none;
 }
@@ -70,10 +71,10 @@ input[type="radio"]{
     overflow: hidden;
     transition: max-height 0.5s, padding 0.5s;
 
-.accordion input[type="radio"]:checked + label + content{
-    max-height: 400px;
-    padding: 10px 10px 20px;
-}
+    .accordion input[type="radio"]:checked ~ label +.accordion li.content {
+      max-height: 400px;
+      padding: 10px 10px 20px;
+    }
 .accordion input[type="radio"]:checked + label ::before {
     content: "-";
 }
