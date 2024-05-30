@@ -30,6 +30,7 @@ fetch('JSON Dashboard/summary.json')
         ]
       },
       options: {
+        responsive: true,
       }
     });
   })
@@ -87,6 +88,7 @@ fetch('JSON Dashboard/summary.json')
         ],
       },
       options: {
+        responsive: true,
         scales: {
           y: {
             beginAtZero: true,
@@ -195,6 +197,7 @@ fetch('JSON Dashboard/summary.json')
               }]
             },
             options: {
+              responsive: true,
               indexAxis: 'y', // <-- here
               scales: {
                 y: {
