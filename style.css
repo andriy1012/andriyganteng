@@ -465,7 +465,6 @@ MEDIA QUERY
 
 @media screen and (max-width:1200px) {
     .container{
-      width: 90%;
       grid-template-columns: 7rem auto 14rem;
     }
     aside .sidebar h3{
