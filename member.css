@@ -102,9 +102,10 @@ small{
    gap: 3rem;
  }
  aside .logo img{
-   width: 2rem;
-   height: 2rem;
-   align-items: flex-end;
+  width: 24.rem;
+  height: 2.4rem;
+  margin-right: 10px;
+  align-items: flex-end;
  }
  aside .top div.close span{
    display: none;
