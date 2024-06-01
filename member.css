@@ -325,7 +325,6 @@ MEDIA QUERY
       width: 5.6rem;
     }
     aside .sidebar a:last-child{
-      position: relative;
       margin-top: 1.8rem;
     }
     main .insights{
@@ -362,8 +361,8 @@ MEDIA QUERY PHONE
   cursor: pointer;
   color: var(--clr-dark);
   position: absolute;
-  left: 1rem;
-.team-member{
+  left: 1rem;}
+.team-members {
   display: grid;
   grid-template-columns: repeat(2,1fr)
 }
