@@ -287,6 +287,27 @@ Right Side
   color: var(--clr-dark);
 }
 
+footer{
+  text-align: center;
+  padding: 10px;
+  background-color: #5d5fef;
+
+}
+
+ .footer-main {
+  background-color: #5d5fef;
+  color: white;
+  text-align: center;
+  max-width: 1200px; /* max width of footer content */
+  margin: 0 auto; /* center footer content */
+  padding: 1rem;
+}
+
+.footer-main h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+
+}
 /* **********8
 MEDIA QUERY
 ****************/
@@ -333,6 +354,19 @@ MEDIA QUERY PHONE
     left: -110px;
     animation:  menuLeft .3s ease forwards;
   }
+  
+ .right .top button{
+  display: inline-block;
+  background: transparent;
+  cursor: pointer;
+  color: var(--clr-dark);
+  position: absolute;
+  left: 1rem;
+.team-member{
+  display: grid;
+  grid-template-columns: repeat(2,1fr)
+}
+}
   
   @keyframes menuLeft {
       to{
