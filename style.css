@@ -453,14 +453,15 @@ footer{
   color: white;
   text-align: center;
   padding: 10px;
-  width: 100%;
+  max-width: 1200px; /* max width of footer content */
+  margin: 0 auto; /* center footer content */
+  padding: 1rem;
 }
 
- .footer-about{
-  width: 90%;
-  margin-bottom: 10px;
+.footer-main h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
 }
-
  
 
 /* **********8
@@ -607,4 +608,16 @@ padding: 1px;
 .footer{
   width: 100%;
   margin-bottom: 10px;
+}
+footer {
+  padding: 1rem;
+}
+
+.footer-main {
+  padding: 0.5rem;
+}
+
+.footer-main h2 {
+  font-size: 1rem;
+}
 }
