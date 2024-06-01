@@ -494,7 +494,7 @@ MEDIA QUERY
 MEDIA QUERY PHONE
 ************************/
 
-@media screen and (max-width:480px) {
+@media screen and (max-width:768px) {
 .container{
   width: 100%;
   grid-template-columns: repeat(1,1fr);
@@ -563,6 +563,7 @@ display: grid;
 grid-template-columns: repeat(1,1fr);
 gap: 0.5 rem;
 padding: 1px;
+width: 80%;
 }
 
 
@@ -602,6 +603,7 @@ padding: 1px;
 }
 .charts-card {
   margin-bottom: 5px;
+  width: 80%;
 }
 
 }
