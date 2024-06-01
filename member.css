@@ -240,7 +240,7 @@ Right Side
   margin-top: 1.4rem;
 }
 .right h2{
-  color: var(--clr-dark);
+  color: white;
 }
 .right .top{
   display: flex;
@@ -291,7 +291,8 @@ footer{
   text-align: center;
   padding: 10px;
   background-color: #5d5fef;
-
+margin: 0;
+padding: 0;
 }
 
  .footer-main {
