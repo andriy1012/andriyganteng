@@ -26,6 +26,68 @@
 
 }
 
+.filter{
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: #f9f9f9;
+  color: #333;
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 200px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.dropdown-content div {
+  margin-bottom: 10px;
+}
+
+.dropdown-content label, .dropdown-content select {
+  color: #333;
+  padding: 8px 0;
+  display: block;
+}
+
+.dropdown-content input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+#year-filter {
+  width: 100%;
+  padding: 5px;
+  height: auto;
+  box-sizing: border-box;
+}
+#country-filter {
+  width: 100%;
+  padding: 5px;
+  height: auto;
+  box-sizing: border-box;
+}
+
 
 *{
   margin: 0;
