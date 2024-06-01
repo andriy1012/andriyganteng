@@ -83,6 +83,9 @@ small{
 .warning {
   color: var(--clr-warnig);
 }
+.right .top button{
+  display: none;
+}
 
 
 /* samping kiri*/
@@ -101,13 +104,16 @@ small{
    display: flex;
    gap: 3rem;
  }
+ aside .top div.close span{
+  display: none;
+}
  aside .logo img{
   width: 24.rem;
   height: 2.4rem;
   margin-right: 10px;
   align-items: flex-end;
  }
- aside .top div.close span{
+aside .top div.close span{
    display: none;
  }
 
@@ -118,6 +124,9 @@ small{
   position: relative;
   top: 1rem;
  }
+ aside .top div.close span{
+  display: none;
+}
 
  aside h3{
   font-weight: 500;
@@ -165,6 +174,7 @@ small{
    font-size: 11px;
    border-radius: var(--border-radius-1);
  }
+ 
 
  main{
     margin-top: 1rem;
@@ -331,6 +341,9 @@ MEDIA QUERY
       display: grid;
       grid-template-columns: repeat(1,1fr);
     }
+    .right .top button{
+      display: none;
+    }
 }
 
 /* ****************
@@ -385,11 +398,9 @@ MEDIA QUERY PHONE
     height: 3.4rem;
   }
   aside .top div.close  span{
-     display: inline;
-     position: absolute;
+     display: none;
      right: 0;
      margin-right:30px;
      font-size: 35px;
      cursor: pointer;
   }
-}
