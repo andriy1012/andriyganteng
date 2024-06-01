@@ -34,6 +34,8 @@
 .accordion{
     margin: 20px auto;
     width: 1000px;
+    max-width: 1200px;
+    padding: 1rem;
 }
 .accordion li {
     background :#e8eaec;
@@ -268,70 +270,167 @@ MEDIA QUERY
 ****************/
 
 @media screen and (max-width:1200px) {
-    .container{
-      width: 94%;
-      grid-template-columns: 7rem auto 14rem;
-    }
-    aside .sidebar h3{
-      display: none;
-    }
-    aside .sidebar a{
-      width: 5.6rem;
-    }
-    aside .sidebar a:last-child{
-      position: relative;
-      margin-top: 1.8rem;
-    }
-    main .insights{
-      display: grid;
-      grid-template-columns: repeat(1,1fr);
-    }
+  .container{
+    width: 94%;
+    grid-template-columns: 7rem auto 14rem;
+  }
+  aside .sidebar h3{
+    display: none;
+  }
+  aside .sidebar a{
+    width: 5.6rem;
+  }
+  aside .sidebar a:last-child{
+
+    margin-top: 1.8rem;
+  }
+  main .insights{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+  }
 }
+
 
 /* ****************
 MEDIA QUERY PHONE
 ************************/
 
 @media screen and (max-width:768px) {
-  .container{
-    width: 100%;
-    grid-template-columns: repeat(1,1fr);
-  
-  }
-  
-  aside{
-    position: fixed;
-    width: 18rem;
-    z-index: 3;
-    height: 100vh;
-    background-color: var(--clr-white);
-    display: none;
-    left: -110px;
-    animation:  menuLeft .3s ease forwards;
-  }
-  
-  @keyframes menuLeft {
-      to{
-        left: 0;
-      }
-  }
-  
-  aside .logo h2{
-       display: inline;
-  }
-  aside .sidebar h3{
-    display: inline;
-  }
-  aside .sidebar a{
-    width: 100%;
-    height: 3.4rem;
-  }
-  aside .top div.close  span{
+.container{
+  width: 100%;
+  grid-template-columns: repeat(1,1fr);
+
+
+}
+
+
+aside{
+  position: fixed;
+  width: 18rem;
+  z-index: 3;
+  background-color: var(--clr-white);
+  display: none;
+  left: -110px;
+  animation:  menuLeft .3s ease forwards;
+}
+
+@keyframes menuLeft {
+    to{
+      left: 0;
+    }
+}
+
+
+
+
+aside .logo h2{
      display: inline;
-     position: absolute;
-     right: 0;
-     margin-right:30px;
-     font-size: 35px;
-     cursor: pointer;
+}
+aside .sidebar h3{
+  display: inline;
+}
+aside .sidebar a{
+  width: 100%;
+  height: 3.4rem;
+}
+aside .top div.close  span{
+   display: inline;
+   position: absolute;
+   right: 0;
+   margin-right:30px;
+   font-size: 35px;
+   cursor: pointer;
+}
+
+  .right .top{
+     position: fixed;
+     top: 0;
+     left: 0;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     padding: 0 0.8rem;
+     background: var(--clr-white);
+     height: 4.6rem;
+     width: 100%;
+     z-index: 2;
+     box-shadow: 0 1rem 1rem var(--clr-light);
+     margin: 0;
   }
-}}
+
+
+main .insights{
+display: grid;
+grid-template-columns: repeat(1,1fr);
+gap: 0.5 rem;
+padding: 1px;
+width: 70%;
+}
+.accordion label {
+  font-size: 1rem;
+}
+
+.accordion .content {
+  padding: 0.5rem;
+}
+}
+
+
+.right .profile{
+  position: absolute;
+  left: 70%;
+}
+
+.right .top .theme-toggler{
+  width: 4.4rem;
+  position: absolute;
+  left: 50%;
+}
+ .right .profile .info{
+  display: none;
+ }
+
+ .right .top button{
+   display: inline-block;
+   background: transparent;
+   cursor: pointer;
+   color: var(--clr-dark);
+   position: absolute;
+   left: 1rem;
+
+ }
+ .charts {
+  grid-template-columns: 1fr;
+}main .insights {
+  grid-template-columns: 1fr;
+}
+.charts-cardtb {
+  margin-right: 0;
+  margin-left: 0;
+  width: 70%;
+}
+.charts-card {
+  margin-bottom: 5px;
+  width: 70%;
+}
+.charts-card .jtable {
+  width: 40%;
+  height: 80%;
+
+}
+.footer{
+  width: 100%;
+  margin-bottom: 10px;
+}
+footer {
+  padding: 1rem;
+}
+
+.footer-main {
+  padding: 0.5rem;
+}
+
+.footer-main h2 {
+  font-size: 1rem;
+}
+}
