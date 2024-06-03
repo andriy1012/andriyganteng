@@ -156,7 +156,7 @@ aside .sidebar a{
 }
 aside .top div.close  span{
    display: inline;
-   position: relative;
+   position: absolute;
    right: 0;
    margin-right:30px;
    font-size: 35px;
