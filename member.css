@@ -398,7 +398,7 @@ MEDIA QUERY PHONE
     height: 3.4rem;
   }
   aside .top div.close  span{
-     display: inline;
+     display: none;
      right: 0;
      margin-right:30px;
      font-size: 35px;
