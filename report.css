@@ -154,7 +154,7 @@ aside .sidebar a{
   width: 100%;
   height: 3.4rem;
 }
-aside .top div.close  span{
+aside .top div.close span{
    display: inline;
    position: relative;
    right: 0;
@@ -220,25 +220,20 @@ width: 70%;
    left: 1rem;
 
  }
- .charts {
-  grid-template-columns: 1fr;
-}main .insights {
-  grid-template-columns: 1fr;
+ .image-main {
+  height: 100px;
 }
-.charts-cardtb {
-  margin-right: 0;
-  margin-left: 0;
-  width: 70%;
+.DeskripsiText {
+  font-size: 12px;
+  line-height: 18px;
 }
-.charts-card {
-  margin-bottom: 5px;
-  width: 70%;
+.accordion label {
+  font-size: 14px;
 }
-.charts-card .jtable {
-  width: 40%;
-  height: 80%;
+.accordion.content {
+  padding: 5px;
+}
 
-}
 .footer{
   width: 100%;
   margin-bottom: 10px;
