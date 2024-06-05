@@ -118,8 +118,9 @@ MEDIA QUERY PHONE
 
 @media screen and (max-width:768px) {
 .container{
-  width: 100%;
-  grid-template-columns: repeat(1,1fr);
+display: grid;
+grid-template-columns: repeat( auto-fill, minmax (150px, 1fr));
+  
 
 
 }
