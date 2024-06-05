@@ -11,6 +11,7 @@
   }
 .main-img {
     vertical-align: bottom;
+    margin-bottom: 20px;
     display: flex;
     padding: 0;
     width: 100%;
