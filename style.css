@@ -344,37 +344,29 @@ select::-ms-expand {
   color: #5d5fef;
 }
 
-
 main .insights{
-   display: grid;
-   grid-template-columns: repeat(5,1fr);
-   gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  gap: 1rem;
 }
+
 main .insights>div{
-
-   padding: var(--card-padding);
-   border-radius: var(--card-border-radius);
-   margin-top: 1rem;
-   box-shadow: var(--box-shadow);
-   transition: all .3s ease;
+  padding: var(--card-padding);
+  border-radius: var(--card-border-radius);
+  margin-top: 1rem;
+  box-shadow: var(--box-shadow);
+  transition: all .3s ease;
 }
-
 main .insights > div:hover{
   box-shadow: none;
 }
-main .insights>div  span{
-    background: #fa5a7d;
-    padding: 0.5rem;
-     border-radius: 50%;
-     color: var(--clr-white);
-     font-size: 2rem; 
-  }
 
-main .insights > div.expenses span{
-   background: var(--clr-danger);
+main .insights>div  span{
+  padding: 0.5rem;
+  border-radius: 50%;
+  color: var(--clr-white);
+  font-size: 2rem; 
 }
-main .insights > div.income span{
-background: #41f1b6;}
 
 main .insights > div .middle{
    display: flex;
@@ -385,57 +377,67 @@ main .insights > div .middle h1{
   font-size: 1.6rem;
 }
 
+main .insights > div.sales span{
+  background: #FA5A7D;
+}
+main .insights > div.expenses span{
+  background: #FF947A;
+}
+main .insights > div.income span{
+  background: #3CD856;
+}
+main .insights > div.order span{
+  background: #BF83FF;
+}
+main .insights > div.country span{
+  background: #5176FA;
+}
+
+.sales{
+  background-color: #FFE2E5;
+}
 .expenses{
   background-color:#fff4de ;
 }
 .income{
   background-color: #dcfce7;
 }
-main .expenses>div  span{
-  background: #ff947a;
-  padding: 0.5rem;
-   border-radius: 50%;
-   color: var(--clr-white);
-   font-size: 2rem; 
-}
-main .order>div  span{
-  padding: 0.5rem;
-   border-radius: 50%;
-   color: var(--clr-white);
-   font-size: 2rem; 
+.order{
+  background-color: #F3E8FF;
 }
 .country{
   background-color: #d5ebfc;
 }
 
-main .country>div  span{
- background: #6285fa ;
+main .expenses>div  span{
   padding: 0.5rem;
-   border-radius: 50%;
-   color: var(--clr-white);
-   font-size: 2rem; 
+  border-radius: 50%;
+  color: var(--clr-white);
+  font-size: 2rem; 
+}
+main .order>div  span{
+  padding: 0.5rem;
+  border-radius: 50%;
+  color: var(--clr-white);
+  font-size: 2rem; 
+}
+main .country>div  span{
+  padding: 0.5rem;
+  border-radius: 50%;
+  color: var(--clr-white);
+  font-size: 2rem; 
 }
 main.column {
   float: left;
   width: 33.33%;
   padding: 15px;}
-  .row::after {
-    content: "";
-    display: table;
-    clear: both;
-  }
 
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
-  .country{
-    background-color: #d5ebfc;
-  }
-  main .country>div  span{
-   background: #6285fa ;
-    padding: 0.5rem;
-     border-radius: 50%;
-     color: var(--clr-white);
-     font-size: 2rem; 
-  }
 main h1{
   color: var(--clr-dark);
 }
