@@ -58,6 +58,9 @@ body{
 a{
   color: var(--clr-dark);
 }
+main h1{
+ color: #363949;
+}
 
 h1{
   font-weight: 800;
