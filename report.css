@@ -75,6 +75,7 @@ input[type="radio"]{
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.5s, padding 0.5s;
+}
 
     .accordion input[type="radio"]:checked ~ label +.accordion li.content {
       max-height: 400px;
@@ -106,6 +107,5 @@ width: 70%;
 .accordion .content {
   padding: 0.5rem;
 }
-}
 
-}
+
