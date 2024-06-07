@@ -380,7 +380,7 @@ MEDIA QUERY PHONE
 
  .right .top button{
   display: inline-block;
-  background: transparent;
+  background: var(--clr-white);
   cursor: pointer;
   color: var(--clr-dark);
   position: absolute;
