@@ -363,7 +363,7 @@ MEDIA QUERY PHONE
     animation:  menuLeft .3s ease forwards;
   }
   .right .top {
-    position: relative;
+    position: fixed;
     top: 0;
     left: 0;
     display: flex;
