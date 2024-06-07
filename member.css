@@ -177,7 +177,7 @@ aside .top div.close span{
 
 .team-members {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 1 rem;
 }
 
@@ -340,6 +340,10 @@ MEDIA QUERY
     .right .top button{
       display: none;
     }
+    .team-members {
+      display: grid;
+      grid-template-columns: repeat(3,1fr)
+    }
 }
 
 /* ****************
@@ -432,3 +436,4 @@ aside .top div.close span {
   }
   
 
+}
