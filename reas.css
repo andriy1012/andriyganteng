@@ -169,119 +169,57 @@ small{
    border-radius: var(--border-radius-1);
  }
 
-File metadata and controls
-
-Code
-
-Blame
-.container-main {
-  padding:  auto;
+/*data*/
+ .charts {
+  display: grid;
+  grid-template-columns: repeat(3,1fr) ;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.charts{
+  justify-content: center;
+}
+.chartstb-img{
+  justify-content: center;
+}
+.charts-cardtb {
+  background-color: white;
+  margin-bottom: 20px;
+  margin-right: 700px;
+  margin-left: 700px;
+  padding: 40px;
+  box-sizing: border-box;
+  -webkit-column-break-inside: avoid;
+  border-radius: 5px;
+  box-shadow: 0 6px 7px -4px rgba(0, 0, 0, 0.2);
+}
+.charts-card {
+  background-color: white;
+  margin-bottom: 20px;
+  padding: 25px;
+  box-sizing: border-box;
+  -webkit-column-break-inside: avoid;
+  border-radius: 5px;
+  box-shadow: 0 6px 7px -4px rgba(0, 0, 0, 0.2);
 }
 
-.image-main {
-    color: white;
-    position: flex;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-  }
-.main-img {
-    vertical-align: bottom;
-    margin-bottom: 20px;
-    display: flex;
-    padding: 0;
-    width: 100%;
-    opacity: 0.9;
-  }
-  .DeskripsiText {
-    color: #000000;
-    margin-top: 2vh;
-    margin-bottom: 5vh;
-    text-align: justify;
-    font-size: 0.87rem;
-    line-height: 175%;
-    letter-spacing: 0.01em;
-    font-weight: 500px;
-    position: flex;
-    top: 288px;
-    width: auto;
-    align-items: center;
-    justify-content: center;
-}  
-.accordion{
-    margin: 20px auto;
-    width: 1000px;
-    max-width: 1200px;
-    padding: 1re;
-}
-.accordion li {
-    background :#e8eaec;
-    box-shadow: 2px 2px 10px -1px rgba(0, 0, 0, 0.15),
-                -2px -2px 10px -1px rgba(225, 225, 225, 0.7);
-    list-style: none;
-    width: 100%;
-    margin: 30px;
-    padding: 5px;
-    border-radius: 15px;
-}
-.accordion li label {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    font-size: 0.87rem;
-    font-weight: 500;
-    cursor: pointer;
-}
-label::before{
-    content: "+";
-    margin-right:20px ;
-    font-size: 24px;
-    font-weight: 600;
+.chart-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-input[type="radio"]{
-    display: none;
+table {
+  border-collapse: collapse;
+  width: 100%;
 }
-.accordion .content{
-    color: #302e2e;
-    margin-left:40px ;
-    font-size: 0.7rem;
-    padding: 0 10px;
-    line-height: 26px;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s, padding 0.5s;
+th, td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
 }
-
-    .accordion input[type="radio"]:checked ~ label +.accordion li.content {
-      max-height: 400px;
-      padding: 10px 10px 20px;
-    }
-.accordion input[type="radio"]:checked + label ::before {
-    content: "-";
-}
-aside{
-  position: fixed;
-  width: 18rem;
-  z-index: 3;
-  background-color: var(--clr-white);
-  display: none;
-  left: -110px;
-  animation:  menuLeft .3s ease forwards;
-}
-main .insights{
-display: grid;
-grid-template-columns: repeat(1,1fr);
-gap: 0.5 rem;
-padding: 1px;
-width: 70%;
-}
-.accordion label {
-  font-size: 1rem;
-}
-
-.accordion .content {
-  padding: 0.5rem;
+th {
+  background-color: #f2f2f2;
 }
 
  main{
