@@ -168,60 +168,6 @@ small{
    font-size: 11px;
    border-radius: var(--border-radius-1);
  }
-
-/*data*/
- .charts {
-  display: grid;
-  grid-template-columns: repeat(3,1fr) ;
-  gap: 1rem;
-  margin-top: 1rem;
-}
-.charts{
-  justify-content: center;
-}
-.chartstb-img{
-  justify-content: center;
-}
-.charts-cardtb {
-  background-color: white;
-  margin-bottom: 20px;
-  margin-right: 700px;
-  margin-left: 700px;
-  padding: 40px;
-  box-sizing: border-box;
-  -webkit-column-break-inside: avoid;
-  border-radius: 5px;
-  box-shadow: 0 6px 7px -4px rgba(0, 0, 0, 0.2);
-}
-.charts-card {
-  background-color: white;
-  margin-bottom: 20px;
-  padding: 25px;
-  box-sizing: border-box;
-  -webkit-column-break-inside: avoid;
-  border-radius: 5px;
-  box-shadow: 0 6px 7px -4px rgba(0, 0, 0, 0.2);
-}
-
-.chart-title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-table {
-  border-collapse: collapse;
-  width: 100%;
-}
-th, td {
-  border: 1px solid black;
-  padding: 8px;
-  text-align: left;
-}
-th {
-  background-color: #f2f2f2;
-}
-
  main{
   margin-top: 1rem;
   width: auto;
@@ -514,10 +460,7 @@ MEDIA QUERY PHONE
 .container{
   width: 100%;
   grid-template-columns: repeat(1,1fr);
-
-
 }
-
 
 aside{
   position: fixed;
@@ -534,9 +477,6 @@ aside{
       left: 0;
     }
 }
-
-
-
 
 aside .logo h2{
      display: inline;
@@ -581,14 +521,12 @@ gap: 0.5 rem;
 padding: 1px;
 width: 70%;
 }
+  
 .accordion {
 grid-template-columns: repeat(1,1fr);
 width: 40%;
 }
-
-
-
-
+  
 .right .profile{
   position: absolute;
   left: 70%;
@@ -599,6 +537,7 @@ width: 40%;
   position: absolute;
   left: 50%;
 }
+  
  .right .profile .info{
   display: none;
  }
@@ -614,7 +553,7 @@ width: 40%;
  }
  
 .footer{
-  width: 10%;
+  width: 100%;
   margin-bottom: 10px;
 }
 footer {
