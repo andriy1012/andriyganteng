@@ -109,4 +109,24 @@ width: 70%;
 }
 }
 
-
+@media (max-width: 768px) {
+  .accordion {
+    width: 100%;
+    max-width: none;
+    padding: 0.5rem;
+  }
+  .accordion li {
+    margin: 15px;
+    padding: 10px;
+  }
+  .accordion label {
+    font-size: 0.9rem;
+  }
+  .accordion .content {
+    padding: 10px;
+    font-size: 0.8rem;
+  }
+  main .insights {
+    width: 90%;
+  }
+}
