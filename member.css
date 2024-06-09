@@ -361,11 +361,7 @@ MEDIA QUERY PHONE
   }
   
   aside{
-<<<<<<< HEAD
     position: absolute;
-=======
-    position: fixed;
->>>>>>> a6ce76c2c42890bae1c0b914f6e3c0739845959a
     width: 18rem;
     z-index: 3;
     background-color: var(--clr-white);
