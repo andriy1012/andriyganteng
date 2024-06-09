@@ -354,7 +354,7 @@ MEDIA QUERY PHONE
   }
   
   aside{
-    position: relative;
+    position: absolute;
     width: 18rem;
     z-index: 3;
     background-color: var(--clr-white);
@@ -417,3 +417,4 @@ aside .top div.close span {
   }
   
 
+}
