@@ -26,6 +26,27 @@
 
 }
 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0;
+  text-decoration: none;
+  list-style: none;
+  appearance: none;
+}
+
+body{
+   width: 100vw;
+   height: 100vh;
+   font-size: .7rem;
+   user-select: none;
+   overflow-x: hidden;
+   background: var(--clr-color-background);
+   font-family: 'Poppins', sans-serif;
+}
+
+
 .filter{
   position: relative;
   margin-bottom: 15px;
@@ -88,26 +109,6 @@
   box-sizing: border-box;
 }
 
-
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  border: 0;
-  text-decoration: none;
-  list-style: none;
-  appearance: none;
-}
-
-body{
-   width: 100vw;
-   height: 100vh;
-   font-size: .7rem;
-   user-select: none;
-   overflow-x: hidden;
-   background: var(--clr-color-background);
-   font-family: 'Poppins', sans-serif;
-}
 
 .container  {
   display: grid;
