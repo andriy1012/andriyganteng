@@ -58,6 +58,9 @@ body{
 a{
   color: var(--clr-dark);
 }
+main h1{
+ color: #363949;
+}
 
 h1{
   font-weight: 800;
@@ -177,7 +180,7 @@ aside .top div.close span{
 
 .team-members {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 1 rem;
 }
 
@@ -340,6 +343,10 @@ MEDIA QUERY
     .right .top button{
       display: none;
     }
+    .team-members {
+      display: grid;
+      grid-template-columns: repeat(3,1fr)
+    }
 }
 
 /* ****************
@@ -354,7 +361,11 @@ MEDIA QUERY PHONE
   }
   
   aside{
+<<<<<<< HEAD
     position: absolute;
+=======
+    position: fixed;
+>>>>>>> a6ce76c2c42890bae1c0b914f6e3c0739845959a
     width: 18rem;
     z-index: 3;
     background-color: var(--clr-white);
@@ -362,10 +373,25 @@ MEDIA QUERY PHONE
     left: -110px;
     animation:  menuLeft .3s ease forwards;
   }
-  
+  .right .top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0.8rem;
+    background: var(--clr-white);
+    height: 4.6rem;
+    width: 100%;
+    z-index: 2;
+    box-shadow: 0 1rem 1rem var(--clr-light);
+    margin: 0;
+}
+
  .right .top button{
   display: inline-block;
-  background: transparent;
+  background: var(--clr-white);
   cursor: pointer;
   color: var(--clr-dark);
   position: absolute;

@@ -11,6 +11,7 @@
   }
 .main-img {
     vertical-align: bottom;
+    margin-bottom: 20px;
     display: flex;
     padding: 0;
     width: 100%;
@@ -35,7 +36,7 @@
     margin: 20px auto;
     width: 1000px;
     max-width: 1200px;
-    padding: 1re;
+    padding: 1rem;
 }
 .accordion li {
     background :#e8eaec;
@@ -66,12 +67,15 @@ input[type="radio"]{
     display: none;
 }
 .accordion .content{
-    color: #555;
+    color: #302e2e;
+    margin-left:40px ;
+    font-size: 14px;
     padding: 0 10px;
     line-height: 26px;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.5s, padding 0.5s;
+
 
     .accordion input[type="radio"]:checked ~ label +.accordion li.content {
       max-height: 400px;
@@ -80,51 +84,6 @@ input[type="radio"]{
 .accordion input[type="radio"]:checked + label ::before {
     content: "-";
 }
-
-
-/*********************
-Right Side
-**********************/
-
-/* **********8
-MEDIA QUERY
-****************/
-
-@media screen and (max-width:1200px) {
-  .container{
-    width: 94%;
-    grid-template-columns: 7rem auto 14rem;
-  }
-  aside .sidebar h3{
-    display: none;
-  }
-  aside .sidebar a{
-    width: 5.6rem;
-  }
-  aside .sidebar a:last-child{
-
-    margin-top: 1.8rem;
-  }
-  main .insights{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-  }
-}
-
-
-/* ****************
-MEDIA QUERY PHONE
-************************/
-
-@media screen and (max-width:768px) {
-.container{
-  width: 100%;
-  grid-template-columns: repeat(1,1fr);
-
-
-}
-
-
 aside{
   position: fixed;
   width: 18rem;
@@ -134,6 +93,7 @@ aside{
   left: -110px;
   animation:  menuLeft .3s ease forwards;
 }
+<<<<<<< HEAD
 
 @keyframes menuLeft {
     to{
@@ -180,6 +140,8 @@ aside .top div.close span{
   }
 
 
+=======
+>>>>>>> a6ce76c2c42890bae1c0b914f6e3c0739845959a
 main .insights{
 display: grid;
 grid-template-columns: repeat(1,1fr);
@@ -196,11 +158,27 @@ width: 70%;
 }
 }
 
-
-.right .profile{
-  position: absolute;
-  left: 70%;
+@media (max-width: 768px) {
+  .accordion {
+    width: 100%;
+    max-width: none;
+    padding: 0.5rem;
+  }
+  .accordion li {
+    margin: 15px;
+    padding: 10px;
+  }
+  .accordion label {
+    font-size: 0.9rem;
+  }
+  .accordion .content {
+    font-size: 0.8rem;
+  }
+  main .insights {
+    width: 90%;
+  }
 }
+<<<<<<< HEAD
 
 .right .top .theme-toggler{
   width: 4.4rem;
@@ -250,3 +228,5 @@ footer {
   font-size: 1rem;
 }
 }
+=======
+>>>>>>> a6ce76c2c42890bae1c0b914f6e3c0739845959a
