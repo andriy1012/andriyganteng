@@ -6,13 +6,6 @@ fetch('JSON Dashboard/summary.json')
     const profit = data.map(item => ({ year: item.Year, value: parseInt(item.total_Profit) }));
     const cost = data.map(item => ({ year: item.Year, value: parseInt(item.total_Cost) }));
 
-    const yearFilter = document.getElementById('year-filter');
-    years.forEach(year => {
-      const option = document.createElement('option');
-      option.value = year;
-      option.textContent = year;
-      yearFilter.appendChild(option);
-    });
     const ctx = document.getElementById('linechart').getContext('2d');
     const chartConfig = {
       type: 'line',
@@ -52,25 +45,9 @@ fetch('JSON Dashboard/summary.json')
         linechart.update();
       });
     });
-
-    yearFilter.addEventListener('change', function() {
-      const selectedYears = Array.from(this.selectedOptions).map(option => option.value);
-      if (selectedYears.includes('all')) {
-        chartConfig.data.labels = years;
-        chartConfig.data.datasets.forEach(dataset => {
-          dataset.data = data.map(item => parseInt(item[`total_${dataset.label}`]));
-        });
-      } else {
-        const filteredData = data.filter(item => selectedYears.includes(item.Year.toString()));
-        chartConfig.data.labels = filteredData.map(item => item.Year);
-        chartConfig.data.datasets.forEach(dataset => {
-          dataset.data = filteredData.map(item => parseInt(item[`total_${dataset.label}`]));
-        });
-      }
-      linechart.update();
-    });
   })
   .catch(error => console.error(error));
+
 
 
 
