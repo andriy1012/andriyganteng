@@ -633,7 +633,7 @@ aside .top div.close  span{
   grid-template-columns: repeat(1,1fr);
   gap: 0.5 rem;
   padding: 1px;
-  width: 100%;
+  width: 80%;
   }
  .charts {
   grid-template-columns: 1fr;
@@ -653,7 +653,7 @@ aside .top div.close  span{
 
 }
 .footer{
-  width: 100%;
+  width: 80%;
   margin-bottom: 10px;
 }
 footer {
