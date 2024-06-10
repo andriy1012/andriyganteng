@@ -397,18 +397,51 @@ main .insights  .number{
   width: 100%;
   padding: 1rem;
   border-radius: 15px;
+  margin-bottom: 3rem;
+  margin-top: 1rem;
 }
 .input {
   font-family: "Poppins", sans-serif;
   background: var(--clr-color-background);
   font-size: 16px;
   border-radius: 20px;
-  height: 3rem;
+  height: 40px;
+  border: none; 
+  width: 100%; 
+  padding: 10px;
+  border: 1px solid #ccc;
+} 
+.form-group {
+  margin-bottom: 20px;
+}
+.label-feedback {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  display: block;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  font-weight: bold;
+}
+.input:focus {
+  border-color: #aaa;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.send-btn {
+  font-family: "Poppins", sans-serif;
+  background-color: #5d5fef;
+  font-weight: bold;
+  color: #fff;
+  padding: 10px 20px;
   border: none;
-  /* width: 100%; */
-  padding: 0 50px 0 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.send-btn:hover {
+  background-color: #0003a6;
 }
 
+/* Footer */
 footer{
   text-align: center;
   padding: 10px;
