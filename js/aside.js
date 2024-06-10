@@ -1,3 +1,6 @@
+/* **********
+membuat tombol menu biar tampilin pada mobail
+****************/
 const  sideMenu = document.querySelector('aside');
 const menuBtn = document.querySelector('#menu_bar');
 const closeBtn = document.querySelector('#close_btn');

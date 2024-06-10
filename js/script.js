@@ -1,3 +1,4 @@
+// untuk line chart
 fetch('JSON Dashboard/summary.json')
   .then(response => response.json())
   .then(data => {
@@ -51,7 +52,7 @@ fetch('JSON Dashboard/summary.json')
 
 
 
-
+// untuk bar chart
   fetch('JSON Dashboard/revenue.json')
   .then(response => response.json())
   .then(data => {
@@ -133,6 +134,7 @@ fetch('JSON Dashboard/summary.json')
   })
   .catch(error => console.error(error));
 
+ // untuk pie chart 
   fetch('JSON Dashboard/agepie.json')
   .then(response => response.json())
   .then(data => {
@@ -203,7 +205,7 @@ fetch('JSON Dashboard/summary.json')
   })
   .catch(error => console.error(error));
 
-
+// untuk buat table
   fetch('JSON Dashboard/mpq.json')
   .then(response => response.json())
   .then(data => {
@@ -241,7 +243,6 @@ fetch('JSON Dashboard/summary.json')
       });
     };
 
-    // Initial render
     renderTable(data.slice(0, 7));
 
     document.querySelectorAll('.category-checkbox').forEach(checkbox => {
@@ -255,6 +256,8 @@ fetch('JSON Dashboard/summary.json')
   })
   .catch(error => console.error('Error fetching data:', error));
 
+
+  // untuk horizontal chart
  fetch('JSON Dashboard/ke52.json')
         .then(response => response.json())
         .then(data => {
@@ -288,7 +291,7 @@ fetch('JSON Dashboard/summary.json')
             },
             options: {
               responsive: true,
-              indexAxis: 'y', // <-- here
+              indexAxis: 'y', // yg bedain vertikal sama horizontal
               scales: {
                 y: {
                   beginAtZero: true

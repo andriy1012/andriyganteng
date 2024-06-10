@@ -4,7 +4,9 @@ body{
 .container-main {
   padding:  auto;
 }
-
+/* **********8
+ukuran gambar
+****************/
 .image-main {
     color: white;
     position: flex;
@@ -20,6 +22,9 @@ body{
     width: 100%;
     opacity: 0.9;
   }
+  /* **********8
+untuk deskripsi
+****************/
   .DeskripsiText {
     color: #000000;
     margin-top: 2vh;
@@ -35,6 +40,9 @@ body{
     align-items: center;
     justify-content: center;
 }  
+/* **********8
+accordion
+****************/
 .accordion{
     margin: 20px auto;
     width: 1000px;
@@ -87,6 +95,9 @@ input[type="radio"]{
 .accordion input[type="radio"]:checked + label ::before {
     content: "-";
 }
+/* **********8
+MENU SEBELAH KIRI untuk tampilan mobil
+****************/
 aside{
   position: fixed;
   width: 18rem;
@@ -111,7 +122,9 @@ width: 70%;
   padding: 0.5rem;
 }
 }
-
+/* **********8
+MEDIA QUARRY UNTUK MOBILE
+****************/
 @media (max-width: 768px) {
   .accordion {
     width: 100%;

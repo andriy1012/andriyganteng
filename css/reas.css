@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;0,800;1,600&display=swap');
 
-
+/* **********
+Libraries warna
+****************/
 :root {
   --clr-primary: #7380ec;
   --clr-danger: #ff7782;
@@ -80,15 +82,13 @@ small{
 }
 
 
-.warning {
-  color: var(--clr-warnig);
-}
 
 .right .top button{
   display: none;
 }
-
-/* samping kiri*/
+/* **********
+MENU SEBELAH KIRI
+****************/
  aside{
   height: 100vh;
  }
@@ -168,226 +168,6 @@ small{
    font-size: 11px;
    border-radius: var(--border-radius-1);
  }
- main{
-  margin-top: 1rem;
-  width: auto;
- }
- main input {
-  background-color: transparent;
-  border: 0;
-  outline: 0;
-  color: var(--clr-dark);
- }
-
-main .select{
-  display: inline-flex;
-  background: var(--clr-white);
-  border-radius: var(--border-radius-1);
-  margin-top: 1rem;
-  padding: 0.5rem 1.6rem;
-}
-button{
-  border-radius: var(--border-radius-1);
-  border: none;
-  color: white;
-  padding: 0.4rem 1.6rem;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  background-color: #5d5fef ;
-   }
-.button1
-.button2
- .select{
-  position: relative;
-  display: flex;
-  width: 200px;
-  height: 3em;
-  line-height: 3;
-  background:  var(--clr-white);
-  overflow: hidden;
-  border-radius: .25em;
-}
-.select::after {
-  content: none;
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 0 1em;
-  background:  var(--clr-white);
-  cursor: grab;
-  transition:.25s all ease;
-}
-select::-ms-expand {
-  display: none;
-  background: wi;
-}
-.select:hover::after {
-  color: #5d5fef;
-}
-
-
-main .insights{
-   display: grid;
-   grid-template-columns: repeat(5,1fr);
-   gap: 1rem;
-}
-main .insights>div{
-
-   padding: var(--card-padding);
-   border-radius: var(--card-border-radius);
-   margin-top: 1rem;
-   box-shadow: var(--box-shadow);
-   transition: all .3s ease;
-}
-
-main .insights > div:hover{
-  box-shadow: none;
-}
-main .insights>div  span{
-    background: #fa5a7d;
-    padding: 0.5rem;
-     border-radius: 50%;
-     color: var(--clr-white);
-     font-size: 2rem; 
-  }
-
-main .insights > div.expenses span{
-   background: var(--clr-danger);
-}
-main .insights > div.income span{
-background: #41f1b6;}
-
-main .insights > div .middle{
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
-}
-main .insights > div .middle h1{
-  font-size: 1.6rem;
-}
-
-.expenses{
-  background-color:#fff4de ;
-}
-.income{
-  background-color: #dcfce7;
-}
-main .expenses>div  span{
-  background: #ff947a;
-  padding: 0.5rem;
-   border-radius: 50%;
-   color: var(--clr-white);
-   font-size: 2rem; 
-}
-main .order>div  span{
-  padding: 0.5rem;
-   border-radius: 50%;
-   color: var(--clr-white);
-   font-size: 2rem; 
-}
-.country{
-  background-color: #d5ebfc;
-}
-
-main .country>div  span{
- background: #6285fa ;
-  padding: 0.5rem;
-   border-radius: 50%;
-   color: var(--clr-white);
-   font-size: 2rem; 
-}
-main.column {
-  float: left;
-  width: 33.33%;
-  padding: 15px;}
-  .row::after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-
-
-  .country{
-    background-color: #d5ebfc;
-  }
-  main .country>div  span{
-   background: #6285fa ;
-    padding: 0.5rem;
-     border-radius: 50%;
-     color: var(--clr-white);
-     font-size: 2rem; 
-  }
-main h1{
-  color: var(--clr-dark);
-}
-main .insights h1{
-  color: var(--clr-dark);
-}
-main .insights h3{
-  color: var(--clr-dark);
-}
-main .insights p{
-  color: var(--clr-dark);
-}
-main .insights h3{
-  
-    color: var(--clr-dark);
-  
-  
-}
-
-main .insights .progress{
-  position: relative;
-  height: 68px;
-  width: 68px;
-  border-radius: 50px;
-}
-
-main .insights svg{
-  height: 150px;
-  width: 150px;
-  position: absolute;
-  top: 0;
-}
-
-main .insights svg circle{
-  fill: none;
-  stroke: var(--clr-primary);
-   transform: rotate(270,80,80);
-   stroke-width: 5;
-}
-main .insights .sales svg circle{
-   stroke-dashoffset: 0;
-   stroke-dasharray: 150;
-}
-
-main .insights .expenses svg circle{
-  stroke-dashoffset: 10;
-  stroke-dasharray: 150;
-}
-main .insights .sales svg circle{
-  stroke-dashoffset: 0;
-  stroke-dasharray: 150;
-}
-main .insights .income svg circle{
-  stroke: var(--clr-success);
-}
-
-main .insights  .number{
-  position: absolute;
-  top: 5%;
-  left: 5%;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 /* Any Feedback */
 .form-login {
   background-color: #e8eaec;
@@ -453,8 +233,8 @@ footer{
   background-color: #5d5fef;
   color: white;
   text-align: center;
-  max-width: 1200px; /* max width of footer content */
-  margin: 0 auto; /* center footer content */
+  max-width: 1200px; 
+  margin: 0 auto; 
   padding: 1rem;
 }
 
