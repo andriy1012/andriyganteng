@@ -12,8 +12,8 @@
 </head>
 <body>
    <div class="container">
-      <aside>
-           
+    <!--menu samping kiri-->
+      <aside>   
          <div class="top">
            <div class="logo">
              <h2><span><img src="images/logofix.png"weight="10px"height="10px" alt=""></span> </h2>
@@ -45,8 +45,8 @@
 
 
       </aside>
+      <!--buat tombol menu di tampilan mobile-->
       <div class="right">
-
         <div class="top">
            <button id="menu_bar">
              <span class="material-symbols-sharp">menu</span>
@@ -58,6 +58,7 @@
         <br>
     <br>
            <h1>Dashboard</h1>
+           <!--bikin kartu -->
         <div class="insights">
             <div class="sales">
                <span class="material-symbols-sharp"><img src="images/profit.png" width="25px" height="25px" alt=""></span>
@@ -128,6 +129,7 @@
             </div>
      
                 </div>
+                <!--membuat carts dari json file-->
                 <div class="charts"> 
 
     <div class="charts-card">
@@ -163,7 +165,6 @@
                           <div>
                             <label for="country-filter">Country:</label>
                             <select id="country-filter" multiple>
-                              <!-- Options will be populated dynamically -->
                             </select>
                           </div>
                           <div>
@@ -183,7 +184,6 @@
                         <button class="dropbtn">Filter</button>
                         <div class="dropdown-content">
                           <div id="age-group-filters">
-                            <!-- Checkboxes will be populated dynamically -->
                           </div>
                         </div>
                       </div>
@@ -197,7 +197,6 @@
                         <button class="dropbtn">Filter</button>
                         <div class="dropdown-content">
                           <div id="product-category-filters">
-                            <!-- Checkboxes will be populated dynamically -->
                           </div>
                         </div>
                       </div>
@@ -214,7 +213,6 @@
                       <tbody></tbody>
                     </table>
                   </div>
-                  
                   <div class="charts-card">
                     <h2 class="chart-title">Highest Product Revenue</h2>
                     <canvas id="miring" style="display: block; box-sizing: border-box; height: 277px; width: 555px;" width="277" height="138"></canvas>
@@ -227,14 +225,14 @@
 
 
 </div>
-
+<!--footer-->
 <footer>
   <div class="footer-main">
 <h2>Copyrigt by Team07-Sby ©️ 2024</h2>
   </div>  
 </footer>
-
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<!--scrip untk link js-->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!--sumber chart-->
 <script src="/js/script.js"></script>
 <script src="/js/aside.js"></script>
 
