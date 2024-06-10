@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;0,800;1,600&display=swap');
 
-
+/* **********
+Libraries warna
+****************/
 :root {
   --clr-primary: #7380ec;
   --clr-danger: #ff7782;
@@ -47,6 +49,41 @@ body{
 }
 
 
+
+.container  {
+  display: grid;
+  width: 96%;
+  gap: 1.8rem;
+  grid-template-columns: 14rem auto 16rem;
+  margin: 0 auto;
+}
+
+a{
+  color: var(--clr-dark);
+}
+
+h1{
+  font-weight: 800;
+  font-size: 2.8rem;
+}
+h2{
+  font-size: 1.4rem;
+}
+h3{
+  font-size: 0.87;
+}
+h4{
+  font-weight: 0.8rem;
+}
+h5{
+  font-size: 0.77rem;
+}
+small{
+  font-size: 0.75rem
+}
+/* **********8
+DROPDOWN FILTER
+****************/
 .filter{
   position: relative;
   margin-bottom: 15px;
@@ -110,48 +147,16 @@ body{
 }
 
 
-.container  {
-  display: grid;
-  width: 96%;
-  gap: 1.8rem;
-  grid-template-columns: 14rem auto 16rem;
-  margin: 0 auto;
-}
-
-a{
-  color: var(--clr-dark);
-}
-
-h1{
-  font-weight: 800;
-  font-size: 2.8rem;
-}
-h2{
-  font-size: 1.4rem;
-}
-h3{
-  font-size: 0.87;
-}
-h4{
-  font-weight: 0.8rem;
-}
-h5{
-  font-size: 0.77rem;
-}
-small{
-  font-size: 0.75rem
-}
-
-
-.warning {
-  color: var(--clr-warnig);
-}
-
+/* **********8
+TOMBOL SEBELAH KIRI UNTUK MOBILE
+****************/
 .right .top button{
   display: none;
 }
 
-/* samping kiri*/
+/* **********8
+MENU SEBELAH KIRI
+****************/
  aside{
   height: 100vh;
  }
@@ -232,7 +237,9 @@ small{
    border-radius: var(--border-radius-1);
  }
 
- /*data*/
+/* **********8
+CHART DAN NAMOLON DATA DARI JSON FILE
+****************/
  .charts {
   display: grid;
   grid-template-columns: repeat(3,1fr) ;
@@ -344,7 +351,9 @@ select::-ms-expand {
 .select:hover::after {
   color: #5d5fef;
 }
-
+/* **********8
+KARTU
+****************/
 main .insights{
   display: grid;
   grid-template-columns: repeat(5,1fr);
@@ -505,7 +514,9 @@ main .insights  .number{
   justify-content: center;
   align-items: center;
 }
-
+/* **********8
+FOOTER
+****************/
 footer{
   text-align: center;
   padding: 10px;
@@ -556,7 +567,7 @@ MEDIA QUERY
 
 
 /* ****************
-MEDIA QUERY PHONE
+MEDIA QUERY MOBILE
 ************************/
 
 @media screen and (max-width:768px) {
