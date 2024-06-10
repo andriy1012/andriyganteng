@@ -23,67 +23,23 @@ items.forEach((item) => {
 });
 
 // Feedback
-const form = document.querySelector('.form-login');
-const emailInput = document.querySelector('input[type="email"]');
-const feedbackInput = document.querySelector('textarea');
-const sendBtn = document.querySelector('.send-btn');
-
-sendBtn.addEventListener('click', (e) => {
-  e.preventDefault();
-  const email = emailInput.value;
-  const feedback = feedbackInput.value;
-
-  if (email && feedback) {
-    const formData = new FormData();
-    formData.append('email', email);
-    formData.append('feedback', feedback);
-
-    const json = JSON.stringify(Object.fromEntries(formData));
-    alert(json);
-
-    emailInput.value = '';
-    feedbackInput.value = '';
-  } else {
-    alert('Please fill in all fields');
-  }
-});
-const express = require('express');
-const app = express();
-const nodemailer = require('nodemailer');
-
-app.use(express.json());
-
-app.post('/send-email', (req, res) => {
-  const { email, feedback } = req.body;
-
-  // Create a transporter object using Nodemailer
-  const transporter = nodemailer.createTransport({
-    host: 'your-smtp-server.com',
-    port: 587,
-    secure: false, // or 'STARTTLS'
-    auth: {
-      user: 'your-email-address',
-      pass: 'your-email-password',
-    },
-  });
-
-  // Define the email options
-  const mailOptions = {
-    from: 'your-email-address',
-    to: email,
-    subject: 'Feedback from Website',
-    text: feedback,
+function sendMail() {
+  var params = {
+    email: document.getElementById("Email").value,
+    message: document.getElementById("feedback").value,
   };
 
-  // Send the email
-  transporter.sendMail(mailOptions, (error, info) => {
-    if (error) {
-      return res.status(500).json({ message: 'Error sending email' });
-    }
-    res.json({ message: 'Email sent successfully' });
-  });
-});
+  const serviceID = "service_f4k1kht";
+  const templateID = "template_ymgnkek";
 
-app.listen(3000, () => {
-  console.log('Server listening on port 3000');
-});
+    emailjs.send(serviceID, templateID, params)
+    .then(res=>{
+        document.getElementById("Email").value = "";
+        document.getElementById("feedback").value = "";
+        console.log(res);
+        alert("Your message sent successfully!!")
+
+    })
+    .catch(err=>console.log(err));
+
+}
