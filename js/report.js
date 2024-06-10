@@ -47,3 +47,43 @@ sendBtn.addEventListener('click', (e) => {
     alert('Please fill in all fields');
   }
 });
+const express = require('express');
+const app = express();
+const nodemailer = require('nodemailer');
+
+app.use(express.json());
+
+app.post('/send-email', (req, res) => {
+  const { email, feedback } = req.body;
+
+  // Create a transporter object using Nodemailer
+  const transporter = nodemailer.createTransport({
+    host: 'your-smtp-server.com',
+    port: 587,
+    secure: false, // or 'STARTTLS'
+    auth: {
+      user: 'your-email-address',
+      pass: 'your-email-password',
+    },
+  });
+
+  // Define the email options
+  const mailOptions = {
+    from: 'your-email-address',
+    to: email,
+    subject: 'Feedback from Website',
+    text: feedback,
+  };
+
+  // Send the email
+  transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+      return res.status(500).json({ message: 'Error sending email' });
+    }
+    res.json({ message: 'Email sent successfully' });
+  });
+});
+
+app.listen(3000, () => {
+  console.log('Server listening on port 3000');
+});
