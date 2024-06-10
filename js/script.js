@@ -291,7 +291,7 @@ fetch('JSON Dashboard/summary.json')
             },
             options: {
               responsive: true,
-              indexAxis: 'y', // yg bedain vertikal sama horizontal
+              indexAxis: 'y', // yg bedain vertikal sama
               scales: {
                 y: {
                   beginAtZero: true
