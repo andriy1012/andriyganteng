@@ -388,6 +388,27 @@ main .insights  .number{
   align-items: center;
 }
 
+/* Any Feedback */
+.form-login {
+  background-color: #e8eaec;
+  gap: 20px;
+  display: grid;
+  margin: auto;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 15px;
+}
+.input {
+  font-family: "Poppins", sans-serif;
+  background: var(--clr-color-background);
+  font-size: 16px;
+  border-radius: 20px;
+  height: 3rem;
+  border: none;
+  /* width: 100%; */
+  padding: 0 50px 0 20px;
+}
+
 footer{
   text-align: center;
   padding: 10px;
