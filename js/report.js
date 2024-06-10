@@ -1,3 +1,4 @@
+// Dropdown hypotesis accordion
 const accordion = document.querySelector('.accordion');
 const items = accordion.querySelectorAll('li');
 
