@@ -135,21 +135,20 @@
                   <div class="charts-card">
                     <h2 class="chart-title">Sales Summary</h2>
                     <div class="filter">
-                        <div class="dropdown">
-                            <button class="dropbtn">Filter</button>
-                            <div class="dropdown-content">
-                                <div>
-                                    <label><input type="checkbox" value="revenue" checked> Revenue</label>
-                                    <label><input type="checkbox" value="profit" checked> Profit</label>
-                                    <label><input type="checkbox" value="cost" checked> Cost</label>
-                                </div>
-                            </div>
+                      <div class="dropdown">
+                        <button class="dropbtn">Filter</button>
+                        <div class="dropdown-content">
+                          <div>
+                            <label><input type="checkbox" value="line-revenue" checked> Revenue</label>
+                            <label><input type="checkbox" value="line-profit" checked> Profit</label>
+                            <label><input type="checkbox" value="line-cost" checked> Cost</label>
+                          </div>
                         </div>
+                      </div>
                     </div>
                     <canvas id="linechart"></canvas>
-                </div>
-                    
-        
+                  </div>
+                  
                   <div class="charts-card">
                     <h2 class="chart-title">Revenue by Countries</h2>
                     <div class="filter">
@@ -158,13 +157,12 @@
                         <div class="dropdown-content">
                           <div>
                             <label for="country-filter">Country:</label>
-                            <select id="country-filter" multiple>
-                            </select>
+                            <select id="country-filter" multiple></select>
                           </div>
                           <div>
-                            <label><input type="checkbox" value="bikes" checked> Bikes Revenue</label>
-                            <label><input type="checkbox" value="accessories" checked> Accessories Revenue</label>
-                            <label><input type="checkbox" value="clothing" checked> Clothing Revenue</label>
+                            <label><input type="checkbox" value="bar-bikes" checked> Bikes Revenue</label>
+                            <label><input type="checkbox" value="bar-accessories" checked> Accessories Revenue</label>
+                            <label><input type="checkbox" value="bar-clothing" checked> Clothing Revenue</label>
                           </div>
                         </div>
                       </div>

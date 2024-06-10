@@ -1,4 +1,3 @@
-// untuk line chart
 fetch('JSON Dashboard/summary.json')
   .then(response => response.json())
   .then(data => {
@@ -8,7 +7,7 @@ fetch('JSON Dashboard/summary.json')
     const cost = data.map(item => ({ year: item.Year, value: parseInt(item.total_Cost) }));
 
     const ctx = document.getElementById('linechart').getContext('2d');
-    const chartConfig = {
+    const lineChartConfig = {
       type: 'line',
       data: {
         labels: years,
@@ -37,22 +36,22 @@ fetch('JSON Dashboard/summary.json')
         responsive: true,
       }
     };
-    const linechart = new Chart(ctx, chartConfig);
+    const linechart = new Chart(ctx, lineChartConfig);
 
     document.querySelectorAll('.dropdown-content input[type="checkbox"]').forEach(checkbox => {
       checkbox.addEventListener('change', function() {
-        const dataset = chartConfig.data.datasets.find(ds => ds.label.toLowerCase() === this.value);
-        dataset.hidden = !this.checked;
-        linechart.update();
+        if (this.value.startsWith('line-')) {
+          const datasetLabel = this.value.replace('line-', '').charAt(0).toUpperCase() + this.value.replace('line-', '').slice(1);
+          const dataset = lineChartConfig.data.datasets.find(ds => ds.label.toLowerCase() === datasetLabel.toLowerCase());
+          dataset.hidden = !this.checked;
+          linechart.update();
+        }
       });
     });
   })
   .catch(error => console.error(error));
 
 
-
-
-// untuk bar chart
   fetch('JSON Dashboard/revenue.json')
   .then(response => response.json())
   .then(data => {
@@ -75,7 +74,7 @@ fetch('JSON Dashboard/summary.json')
     };
 
     const ctx = document.getElementById('chart').getContext('2d');
-    const chartConfig = {
+    const barChartConfig = {
       type: 'bar',
       data: {
         labels: countries,
@@ -113,23 +112,26 @@ fetch('JSON Dashboard/summary.json')
         },
       },
     };
-    const chart = new Chart(ctx, chartConfig);
+    const barchart = new Chart(ctx, barChartConfig);
 
     document.querySelectorAll('.dropdown-content input[type="checkbox"]').forEach(checkbox => {
-      checkbox.addEventListener('change', function () {
-        const dataset = chartConfig.data.datasets.find(ds => ds.label.toLowerCase().includes(this.value));
-        dataset.hidden = !this.checked;
-        chart.update();
+      checkbox.addEventListener('change', function() {
+        if (this.value.startsWith('bar-')) {
+          const datasetLabel = this.value.replace('bar-', '').charAt(0).toUpperCase() + this.value.replace('bar-', '').slice(1) + ' Revenue';
+          const dataset = barChartConfig.data.datasets.find(ds => ds.label.toLowerCase().includes(this.value.replace('bar-', '')));
+          dataset.hidden = !this.checked;
+          barchart.update();
+        }
       });
     });
 
-    countryFilter.addEventListener('change', function () {
+    countryFilter.addEventListener('change', function() {
       const selectedCountries = Array.from(this.selectedOptions).map(option => option.value);
-      chartConfig.data.datasets.forEach(dataset => {
+      barChartConfig.data.datasets.forEach(dataset => {
         const category = dataset.label.split(' ')[0];
         dataset.data = getRevenueData(selectedCountries, category);
       });
-      chart.update();
+      barchart.update();
     });
   })
   .catch(error => console.error(error));
