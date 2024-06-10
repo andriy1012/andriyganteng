@@ -286,7 +286,7 @@ th {
 }
  main{
   margin-top: 1rem;
-  width: auto;
+  width: auto  ;
  }
  main input {
   background-color: transparent;
@@ -577,7 +577,31 @@ aside{
   left: -110px;
   animation:  menuLeft .3s ease forwards;
 }
+.right .top{
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0.8rem;
+  background: var(--clr-white);
+  height: 4.6rem;
+  width: 100%;
+  z-index: 2;
+  box-shadow: 0 1rem 1rem var(--clr-light);
+  margin: 0;
+}
 
+.right .top button{
+display: inline-block;
+background: transparent;
+cursor: pointer;
+color: var(--clr-dark);
+position: absolute;
+left: 1rem;
+
+}
 @keyframes menuLeft {
     to{
       left: 0;
@@ -599,76 +623,29 @@ aside .sidebar a{
 }
 aside .top div.close  span{
    display: inline;
-   right: 0;
-   margin-right:30px;
    font-size: 35px;
    cursor: pointer;
 }
 
-  .right .top{
-     position: fixed;
-     top: 0;
-     left: 0;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     padding: 0 0.8rem;
-     background: var(--clr-white);
-     height: 4.6rem;
-     width: 100%;
-     z-index: 2;
-     box-shadow: 0 1rem 1rem var(--clr-light);
-     margin: 0;
+  
+ main .insights{
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  gap: 0.5 rem;
+  padding: 1px;
+  width: 100%;
   }
-
-
-main .insights{
-display: grid;
-grid-template-columns: repeat(1,1fr);
-gap: 0.5 rem;
-padding: 1px;
-width: 70%;
-}
-
-
-
-
-.right .profile{
-  position: absolute;
-  left: 70%;
-}
-
-.right .top .theme-toggler{
-  width: 4.4rem;
-  position: absolute;
-  left: 50%;
-}
- .right .profile .info{
-  display: none;
- }
-
- .right .top button{
-   display: inline-block;
-   background: transparent;
-   cursor: pointer;
-   color: var(--clr-dark);
-   position: absolute;
-   left: 1rem;
-
- }
  .charts {
   grid-template-columns: 1fr;
 }main .insights {
   grid-template-columns: 1fr;
 }
 .charts-cardtb {
-  margin-right: 0;
-  margin-left: 0;
-  width: 70%;
+  width: 75%;
 }
 .charts-card {
   margin-bottom: 5px;
-  width: 70%;
+  width: 80%;
 }
 .charts-card .jtable {
   width: 60%;
@@ -689,5 +666,8 @@ footer {
 
 .footer-main h2 {
   font-size: 1rem;
+}
+.footer {
+  margin-bottom: 0;
 }
 }
